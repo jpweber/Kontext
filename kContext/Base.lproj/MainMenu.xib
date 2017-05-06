@@ -20,15 +20,7 @@
             </connections>
         </customObject>
         <menu id="5SM-vw-JKO">
-            <items>
-                <menuItem title="Quit" id="L8B-iA-ncX">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="quickClicked:" target="zHm-oN-rgH" id="sDK-U4-prl"/>
-                    </connections>
-                </menuItem>
-            </items>
-            <point key="canvasLocation" x="-805" y="-241"/>
+            <point key="canvasLocation" x="-1124.5" y="-445.5"/>
         </menu>
     </objects>
 </document>

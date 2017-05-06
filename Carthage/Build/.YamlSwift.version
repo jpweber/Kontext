@@ -1,0 +1,24 @@
+{
+  "iOS" : [
+    {
+      "hash" : "b4975e73b94e57195bcc3ae71380b30576f0ce13b61e8fe838a690dffd8a5beb",
+      "name" : "Yaml"
+    }
+  ],
+  "commitish" : "3.4.0",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+    {
+      "hash" : "3615c9d26c938638fd84a6ec7cae9a56575d6b5e44892cafba16851463619561",
+      "name" : "Yaml"
+    }
+  ],
+  "Mac" : [
+    {
+      "hash" : "a66e3213f007fba0f0c378e009ca862a039ffecad86c2ca93aae5b886a5d26ad",
+      "name" : "Yaml"
+    }
+  ]
+}

@@ -37,9 +37,20 @@ class ContextMenuController: NSObject {
         for context in contexts.contextNames {
             let newItem : NSMenuItem = NSMenuItem(title: context, action: #selector(sendContextChange(sender:)), keyEquivalent: "")
             newItem.target = self
+            if context == contexts.currentContext?.string {
+                let icon = NSImage(named: "statusImage")
+                newItem.image = icon
+            }
             statusItem.menu!.addItem(newItem)
             statusItem.menu!.addItem(NSMenuItem.separator())
         }
+        
+        // add the quit menu item last
+        let newItem : NSMenuItem = NSMenuItem(title: "Quit", action: #selector(quitClicked(sender:)), keyEquivalent: "")
+        newItem.target = self
+        statusItem.menu!.addItem(NSMenuItem.separator())
+        statusItem.menu!.addItem(newItem)
+        
         
 
     }
