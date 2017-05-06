@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "kubernetes-icon-1.png",
+      "filename" : "Slice 1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "kubernetes-icon@2x.png",
+      "filename" : "Slice 1@2x.png",
       "scale" : "2x"
     },
     {
