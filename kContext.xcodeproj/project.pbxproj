@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		198813E31EBE962900AD45F5 /* Slice 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 198813E11EBE962900AD45F5 /* Slice 1.png */; };
 		198813E41EBE962900AD45F5 /* Slice 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 198813E21EBE962900AD45F5 /* Slice 1@2x.png */; };
+		198813E81EBEAE6500AD45F5 /* Unavailable.png in Resources */ = {isa = PBXBuildFile; fileRef = 198813E61EBEAE6500AD45F5 /* Unavailable.png */; };
+		198813E91EBEAE6500AD45F5 /* Unavailable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 198813E71EBEAE6500AD45F5 /* Unavailable@2x.png */; };
+		198813EC1EBEB25F00AD45F5 /* KubeConfigWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198813EA1EBEB25F00AD45F5 /* KubeConfigWindow.swift */; };
+		198813ED1EBEB25F00AD45F5 /* KubeConfigWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 198813EB1EBEB25F00AD45F5 /* KubeConfigWindow.xib */; };
 		EE127A621EBBF93A0044F898 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE127A611EBBF93A0044F898 /* AppDelegate.swift */; };
 		EE127A641EBBF93A0044F898 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE127A631EBBF93A0044F898 /* Assets.xcassets */; };
 		EE127A671EBBF93A0044F898 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE127A651EBBF93A0044F898 /* MainMenu.xib */; };
@@ -20,6 +24,10 @@
 /* Begin PBXFileReference section */
 		198813E11EBE962900AD45F5 /* Slice 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Slice 1.png"; path = "../Slice 1.png"; sourceTree = "<group>"; };
 		198813E21EBE962900AD45F5 /* Slice 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Slice 1@2x.png"; path = "../Slice 1@2x.png"; sourceTree = "<group>"; };
+		198813E61EBEAE6500AD45F5 /* Unavailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unavailable.png; sourceTree = "<group>"; };
+		198813E71EBEAE6500AD45F5 /* Unavailable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unavailable@2x.png"; sourceTree = "<group>"; };
+		198813EA1EBEB25F00AD45F5 /* KubeConfigWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KubeConfigWindow.swift; sourceTree = "<group>"; };
+		198813EB1EBEB25F00AD45F5 /* KubeConfigWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KubeConfigWindow.xib; sourceTree = "<group>"; };
 		EE127A5E1EBBF93A0044F898 /* kContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE127A611EBBF93A0044F898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE127A631EBBF93A0044F898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,6 +51,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		198813E51EBEAE4A00AD45F5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				198813E61EBEAE6500AD45F5 /* Unavailable.png */,
+				198813E71EBEAE6500AD45F5 /* Unavailable@2x.png */,
+				198813E11EBE962900AD45F5 /* Slice 1.png */,
+				198813E21EBE962900AD45F5 /* Slice 1@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		EE127A551EBBF93A0044F898 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +82,13 @@
 		EE127A601EBBF93A0044F898 /* kContext */ = {
 			isa = PBXGroup;
 			children = (
-				198813E11EBE962900AD45F5 /* Slice 1.png */,
-				198813E21EBE962900AD45F5 /* Slice 1@2x.png */,
+				198813E51EBEAE4A00AD45F5 /* Resources */,
 				EE6510381EBC25E20081BD48 /* ConfigParser.swift */,
 				EE127A611EBBF93A0044F898 /* AppDelegate.swift */,
 				EE127A631EBBF93A0044F898 /* Assets.xcassets */,
 				EE127A6E1EBC02C30044F898 /* ContextMenuController.swift */,
+				198813EA1EBEB25F00AD45F5 /* KubeConfigWindow.swift */,
+				198813EB1EBEB25F00AD45F5 /* KubeConfigWindow.xib */,
 				EE127A651EBBF93A0044F898 /* MainMenu.xib */,
 				EE127A681EBBF93A0044F898 /* Info.plist */,
 			);
@@ -145,8 +165,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198813E81EBEAE6500AD45F5 /* Unavailable.png in Resources */,
 				198813E41EBE962900AD45F5 /* Slice 1@2x.png in Resources */,
+				198813ED1EBEB25F00AD45F5 /* KubeConfigWindow.xib in Resources */,
 				EE127A641EBBF93A0044F898 /* Assets.xcassets in Resources */,
+				198813E91EBEAE6500AD45F5 /* Unavailable@2x.png in Resources */,
 				198813E31EBE962900AD45F5 /* Slice 1.png in Resources */,
 				EE127A671EBBF93A0044F898 /* MainMenu.xib in Resources */,
 			);
@@ -178,6 +201,7 @@
 			files = (
 				EE127A6F1EBC02C30044F898 /* ContextMenuController.swift in Sources */,
 				EE127A621EBBF93A0044F898 /* AppDelegate.swift in Sources */,
+				198813EC1EBEB25F00AD45F5 /* KubeConfigWindow.swift in Sources */,
 				EE6510391EBC25E20081BD48 /* ConfigParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

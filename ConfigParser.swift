@@ -12,21 +12,20 @@ import SwiftyJSON
 class ConfigParser: NSObject {
 
     struct ConfigData {
+        var fullConfig: JSON?
         var currentContext: JSON?
         var contextNames: Array<String>
         
     }
     func parseConfig(config: String) -> ConfigData {
-        var configData = ConfigData(currentContext: "", contextNames: [])
+        var configData = ConfigData(fullConfig: "", currentContext: "", contextNames: [])
         if let dataFromString = config.data(using: .utf8, allowLossyConversion: false) {
             let json = JSON(data: dataFromString)
+            configData.fullConfig = json
             configData.currentContext =  json["current-context"]
-            print(json["contexts"])
-            print("test")
             
             var idx = 0
             for (_, contextBlock) in json["contexts"] {
-                print(contextBlock["name"])
                 configData.contextNames.append(contextBlock["name"].string!)
                 idx += 1
             }

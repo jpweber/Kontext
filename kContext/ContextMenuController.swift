@@ -9,15 +9,16 @@
 import Cocoa
 import SwiftyJSON
 
-class ContextMenuController: NSObject {
+class ContextMenuController: NSObject, NSMenuDelegate {
 
     @IBOutlet weak var statusMenu: NSMenu!
-    
     @IBAction func quickClicked(_ sender: AnyObject) {
         NSApplication.shared().terminate(self)
     }
     
     let statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    let kubeConfigWindowController = KubeConfigWindow()
+    
     
     override func awakeFromNib() {
         
@@ -25,25 +26,39 @@ class ContextMenuController: NSObject {
         icon?.isTemplate = false // true best for dark mode
         statusItem.image = icon
         statusItem.menu = statusMenu
+        statusItem.menu?.delegate = self
         
         // read in the current kubectl config as json
-        let clusterContexts = getConfig()
-        
+        let clusterContexts = getConfig(outputType: "json")
+        getMenuItems(systemItem: statusItem, contexts: clusterContexts)
+    }
+    
+    func menuWillOpen(_ menu: NSMenu) {
+        // read in the current kubectl config as json
+        let clusterContexts = getConfig(outputType: "json")
         getMenuItems(systemItem: statusItem, contexts: clusterContexts)
     }
     
     //populate menu items
     func getMenuItems(systemItem: NSStatusItem, contexts: ConfigParser.ConfigData){
+        statusItem.menu?.removeAllItems()
         for context in contexts.contextNames {
             let newItem : NSMenuItem = NSMenuItem(title: context, action: #selector(sendContextChange(sender:)), keyEquivalent: "")
             newItem.target = self
+            let nonCurrentIcon = NSImage(named: "nonCurrentContext")
+            newItem.image = nonCurrentIcon
             if context == contexts.currentContext?.string {
-                let icon = NSImage(named: "statusImage")
-                newItem.image = icon
+                let currentIcon = NSImage(named: "currentContext")
+                newItem.image = currentIcon
             }
             statusItem.menu!.addItem(newItem)
-            statusItem.menu!.addItem(NSMenuItem.separator())
         }
+        
+        // add show config item
+        let configItem : NSMenuItem = NSMenuItem(title: "Show Kubectl Config", action: #selector(showKubeConfig(sender:)), keyEquivalent: "")
+        configItem.target = self
+        statusItem.menu!.addItem(NSMenuItem.separator())
+        statusItem.menu!.addItem(configItem)
         
         // add the quit menu item last
         let newItem : NSMenuItem = NSMenuItem(title: "Quit", action: #selector(quitClicked(sender:)), keyEquivalent: "")
@@ -61,8 +76,8 @@ class ContextMenuController: NSObject {
     }
     
     
-   func getConfig() -> ConfigParser.ConfigData {
-        let rc = shell(launchPath: "/usr/local/bin/kubectl", arguments: ["config", "view", "-o", "json"])
+    func getConfig(outputType: String) -> ConfigParser.ConfigData {
+        let rc = shell(launchPath: "/usr/local/bin/kubectl", arguments: ["config", "view", "-o", outputType])
         let configParser = ConfigParser()
         let configContents = rc.0!
         let configData = configParser.parseConfig(config: configContents)
@@ -71,6 +86,12 @@ class ContextMenuController: NSObject {
     
     @IBAction func sendContextChange(sender: NSMenuItem){
         changeContext(sender: sender)
+    }
+    
+    func showKubeConfig(sender: AnyObject) {
+        kubeConfigWindowController.window?.title = "Kubectl Config"
+        kubeConfigWindowController.showWindow(self)
+        
     }
     
     
