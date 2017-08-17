@@ -23,7 +23,7 @@ class ContextMenuController: NSObject, NSMenuDelegate {
     override func awakeFromNib() {
         
         let icon = NSImage(named: "contextIcon")
-        icon?.isTemplate = false // true best for dark mode
+        icon?.isTemplate = true // true best for dark mode
         statusItem.image = icon
         statusItem.menu = statusMenu
         statusItem.menu?.delegate = self
