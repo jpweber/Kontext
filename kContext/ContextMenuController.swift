@@ -91,6 +91,7 @@ class ContextMenuController: NSObject, NSMenuDelegate {
     func showKubeConfig(sender: AnyObject) {
         kubeConfigWindowController.window?.title = "Kubectl Config"
         kubeConfigWindowController.showWindow(self)
+        NSApp.activate(ignoringOtherApps: true)
         
     }
     
