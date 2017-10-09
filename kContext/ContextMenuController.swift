@@ -60,11 +60,14 @@ class ContextMenuController: NSObject, NSMenuDelegate {
         statusItem.menu!.addItem(NSMenuItem.separator())
         statusItem.menu!.addItem(configItem)
         
-        // add the quit menu item last
-        let newItem : NSMenuItem = NSMenuItem(title: "Quit", action: #selector(quitClicked(sender:)), keyEquivalent: "")
-        newItem.target = self
+        // add the about and quit menu items last
+        let quitItem : NSMenuItem = NSMenuItem(title: "Quit", action: #selector(quitClicked(sender:)), keyEquivalent: "")
+//        let aboutItem : NSMenuItem = NSMenuItem(title: "About", action: #selector(quitClicked(sender:)), keyEquivalent: "")
+        quitItem.target = self
+//        aboutItem.target = self
         statusItem.menu!.addItem(NSMenuItem.separator())
-        statusItem.menu!.addItem(newItem)
+//        statusItem.menu!.addItem(aboutItem)
+        statusItem.menu!.addItem(quitItem)
         
         
 

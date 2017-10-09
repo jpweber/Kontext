@@ -32,7 +32,7 @@
 		198813EB1EBEB25F00AD45F5 /* KubeConfigWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KubeConfigWindow.xib; sourceTree = "<group>"; };
 		19B798721EBF5D98008FA787 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		19B798731EBF5D98008FA787 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
-		EE127A5E1EBBF93A0044F898 /* kContext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kContext.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE127A5E1EBBF93A0044F898 /* Kontext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kontext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE127A611EBBF93A0044F898 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE127A631EBBF93A0044F898 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE127A661EBBF93A0044F898 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 		EE127A5F1EBBF93A0044F898 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EE127A5E1EBBF93A0044F898 /* kContext.app */,
+				EE127A5E1EBBF93A0044F898 /* Kontext.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,9 +113,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EE127A5D1EBBF93A0044F898 /* kContext */ = {
+		EE127A5D1EBBF93A0044F898 /* Kontext */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EE127A6B1EBBF93A0044F898 /* Build configuration list for PBXNativeTarget "kContext" */;
+			buildConfigurationList = EE127A6B1EBBF93A0044F898 /* Build configuration list for PBXNativeTarget "Kontext" */;
 			buildPhases = (
 				EE127A5A1EBBF93A0044F898 /* Sources */,
 				EE127A5B1EBBF93A0044F898 /* Frameworks */,
@@ -126,9 +126,9 @@
 			);
 			dependencies = (
 			);
-			name = kContext;
+			name = Kontext;
 			productName = kContext;
-			productReference = EE127A5E1EBBF93A0044F898 /* kContext.app */;
+			productReference = EE127A5E1EBBF93A0044F898 /* Kontext.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -148,7 +148,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EE127A591EBBF93A0044F898 /* Build configuration list for PBXProject "kContext" */;
+			buildConfigurationList = EE127A591EBBF93A0044F898 /* Build configuration list for PBXProject "Kontext" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -161,7 +161,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EE127A5D1EBBF93A0044F898 /* kContext */,
+				EE127A5D1EBBF93A0044F898 /* Kontext */,
 			);
 		};
 /* End PBXProject section */
@@ -359,7 +359,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EE127A591EBBF93A0044F898 /* Build configuration list for PBXProject "kContext" */ = {
+		EE127A591EBBF93A0044F898 /* Build configuration list for PBXProject "Kontext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE127A691EBBF93A0044F898 /* Debug */,
@@ -368,7 +368,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EE127A6B1EBBF93A0044F898 /* Build configuration list for PBXNativeTarget "kContext" */ = {
+		EE127A6B1EBBF93A0044F898 /* Build configuration list for PBXNativeTarget "Kontext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EE127A6C1EBBF93A0044F898 /* Debug */,
