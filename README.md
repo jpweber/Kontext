@@ -4,13 +4,13 @@ Kontext is macOS menubar app for managing kubernetes contexts. It reads all the 
 
 
 
-![Menu Screenshot](Menu Screenshot.png)
+![Menu Screenshot](https://github.com/jpweber/Kontext/blob/master/Menu%20Screenshot.png)
 
 
 
 You can also view your Kubectl config file. 
 
-![Kubectl config screenshot](Kubectl config screenshot.png)
+![Kubectl config screenshot](https://github.com/jpweber/Kontext/blob/master/Kubectl%20config%20screenshot.png)
 
 
 
