@@ -20,7 +20,11 @@ class ConfigParser: NSObject {
     func parseConfig(config: String) -> ConfigData {
         var configData = ConfigData(fullConfig: "", currentContext: "", contextNames: [])
         if let dataFromString = config.data(using: .utf8, allowLossyConversion: false) {
-            let json = JSON(data: dataFromString)
+            let jsonOrig = try? JSON(data: dataFromString)
+            guard let json = jsonOrig else{
+                assert(false, "Problem getting data from json string")
+                exit(0)
+            }
             configData.fullConfig = json
             configData.currentContext =  json["current-context"]
             
